@@ -44,9 +44,10 @@ opt-in. **126** credential-free tests; offline end-to-end demo.
 
 ### 3. [Hermes Enterprise Deployment Lab](https://github.com/dbett4/hermes-enterprise-deployment-lab)
 
-Synthetic deployment lab: FastMCP server, mock enterprise API, workflow runner, Docker
-Compose. Exercises post-commit failure and idempotent resume. **73** credential-free
-tests. Built organically July–August 2026; not a customer deployment claim.
+Synthetic deployment lab: FastMCP server, mock enterprise API, workflow runner, and a
+Compose stack verified with Podman Compose. Exercises post-commit failure and idempotent
+resume. **73** credential-free tests. Built organically July–August 2026; not a customer
+deployment claim.
 
 [Proof guide](https://github.com/dbett4/hermes-enterprise-deployment-lab/blob/main/PROOF.md) ·
 [Approval decision (ADR 005)](https://github.com/dbett4/hermes-enterprise-deployment-lab/blob/main/docs/adr/005-separated-operator-approval.md)
