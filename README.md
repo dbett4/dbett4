@@ -1,27 +1,58 @@
 # Dave Bettner
 
-I build AI-agent systems that do real work on regulated financial reporting platforms. This is work where a bad write ends up in a government's audited financial statements. Background: 12+ years in enterprise SaaS financial reporting, from Workiva Professional Services and Solutions Architecture to leading a CPA firm's governmental reporting practice. Today that delivery runs through agent tooling I engineer: MCP servers, verify-before-write workflows, and multi-agent operations.
+I build agent systems for regulated enterprise work: API integrations, bounded tool use, failure recovery, deterministic verification, and evidence an operator can inspect. My background is 12+ years delivering financial-reporting software—from Workiva Professional Services and Solutions Architecture to leading a CPA firm's governmental reporting practice.
 
-## MCP / API integration engineering
+## Start with the proof
 
-**[regulated-reporting-mcp](https://github.com/dbett4/regulated-reporting-mcp)** — an authenticated MCP server for a regulated reporting platform (Workiva). OAuth2 client-credentials auth, async job polling, cursor pagination, and write-safety guards. Extracted from tooling used in production on live government financial reports; ships with a mock mode so it runs end-to-end without platform credentials.
+### [Enterprise Agent Deployment Field Kit for Hermes](https://github.com/dbett4/hermes-enterprise-playbook)
 
-## Agent-assisted verification on regulated data
+A Hermes-first method for policy-resolved configuration, bounded authority, typed disposition, and reconstructable evidence.
 
-**[wingman](https://github.com/dbett4/wingman)** — a defect-detection copilot for financial reporting workbooks. The core loop is inspect → propose → apply → verify: every mutation is a journaled changeset with a predicted post-state, adopted by diff or rolled back exactly, and validated against deterministic tie-out oracles rather than model confidence. Architecture decisions are recorded as ADRs in the repo. Demos run on synthetic data for the fictional City of Riverton.
+- Pinned to Hermes Agent v0.20.0 / `v2026.8.3` and its peeled release commit.
+- Materialized 318-row capability map with seven explicit unsupported gaps.
+- Eight negative cases exercise fail-closed behavior through the evaluator or reference pipeline.
+- Includes one committed operator-recorded mission output. It passes its deterministic oracle and remains `needs_review`, but no native runtime attestation was captured, so the repository does not claim that the declared Hermes release produced it.
+- One-command credential-free proof: `./scripts/proof.sh`.
+- Inspect: [proof map](https://github.com/dbett4/hermes-enterprise-playbook/blob/main/PROOF.md) · [committed recorded artifact](https://github.com/dbett4/hermes-enterprise-playbook/tree/main/reference-suite/runs/s1-decide-20260811-025135)
 
-**[verify-before-write](https://github.com/dbett4/verify-before-write)** — the design rationale behind wingman as a standalone reference. It walks through the failure modes that make direct agent writes unacceptable on regulated data (silent partial application, compensating errors that tie out, confident wrong states), explains why adjudicating a diff against a predicted post-state beats trusting model confidence, and closes with a worked example on the synthetic City of Riverton data.
+### [Regulated Reporting MCP](https://github.com/dbett4/regulated-reporting-mcp)
 
-## Multi-agent operations
+A guarded MCP integration for Workiva-shaped regulated reporting: OAuth2 client credentials, 401 recovery, 429 backoff, pagination, asynchronous-operation handling, explicit mutation contracts, and synthetic mock mode.
 
-**[agent-team-ops](https://github.com/dbett4/agent-team-ops)** — the coordination templates I use to run a multi-runtime agent fleet (Claude, Codex, Cursor, Hermes) against live financial reporting delivery: task boards, task packets, handoff templates, decision logs, and worktree leases. Verification is separated from building — an agent never adjudicates its own risky change.
+- `workiva-mcp` defaults to a three-tool guarded dispatcher; the raw 117-tool registry requires a named unsafe opt-in.
+- Contracts distinguish a local execution receipt from deterministic readback.
+- Formula writes and missing proof return `indeterminate`, never verified success.
+- Payload-redacted, create-once local receipts are emitted for normal mutation outcomes and post-dispatch exceptions.
+- One-command proof runs lint, exact contract coverage, 126 credential-free tests, and the offline end-to-end demo.
+- Inspect: [proof map](https://github.com/dbett4/regulated-reporting-mcp/blob/main/docs/PROOF.md) · [security boundary](https://github.com/dbett4/regulated-reporting-mcp/blob/main/SECURITY.md)
 
-Open source: [block/buzz #3618](https://github.com/block/buzz/pull/3618) (open) — `fix(acp): coordinate HTTP rate-limit retries` across concurrent ACP agents in Block's 26k-star Rust agent framework.
+### [Hermes Enterprise Deployment Lab](https://github.com/dbett4/hermes-enterprise-deployment-lab)
 
----
+A containerized, customer-shaped lab with a FastMCP server, mock enterprise API, workflow runner, health/readiness checks, scoped credentials, correlation IDs, separated operator approval, and idempotent recovery after an injected post-commit failure.
 
-All of this exists to get agent output past an audit. That is the bar I build to.
+- Docker/Compose topology plus a no-container local demo.
+- Mutations require a separate operator approval record; capabilities expire and become terminal after a confirmed apply or replay.
+- Resume reuses the original idempotency key so an ambiguous retry does not duplicate the side effect.
+- Seventy-three credential-free tests cover approval lifecycle, forged and expired capabilities, auth scope, audit, and recovery behavior.
+- CI reproduces tests, protocol inspection, the failure/recovery demo, and a fresh-clone run.
+- Synthetic lab only—not a customer deployment, identity provider, Kubernetes environment, or production scale claim.
+- Inspect: [proof map](https://github.com/dbett4/hermes-enterprise-deployment-lab/blob/main/PROOF.md) · [approval ADR](https://github.com/dbett4/hermes-enterprise-deployment-lab/blob/main/docs/adr/005-separated-operator-approval.md)
+
+## Additional work
+
+**[Wingman](https://github.com/dbett4/wingman)** — a Chrome extension and Python service for inspecting financial-reporting workbooks, proposing bounded changes, applying them behind account and authorization gates, reading back results, and reverting mismatches. Public demos use the fictional City of Riverton.
+
+**[Verify Before Write](https://github.com/dbett4/verify-before-write)** — a dependency-light reference workflow for prestate hashing, predicted poststate, staleness refusal, deterministic tie-out, journaling, and exact rollback on synthetic city data.
+
+**[Agent Team Ops](https://github.com/dbett4/agent-team-ops)** — documentation and worked examples for task contracts, handoffs, decision records, blockers, and builder/verifier separation. It is process evidence, not an executable orchestration engine.
+
+Open source: [block/buzz #3618](https://github.com/block/buzz/pull/3618) is an open, unmerged contribution covering shared rate-limit coordination and related secure-delivery work in a large Rust agent framework. The PR is public evidence of the work, not a claim of upstream acceptance.
+
+## Boundaries
+
+- Public examples use synthetic data and contain no client credentials or client-owned source.
+- The committed field-kit output is operator-recorded and runtime-unattested; it is evaluation-shape evidence, not proof that the named Hermes release executed.
+- Production-domain experience and public repository age are separate facts: these repositories were published in August 2026 as sanitized, Dave-authored portfolio artifacts.
 
 - Site: [davebettner.com](https://davebettner.com)
 - LinkedIn: [linkedin.com/in/dave-bettner](https://www.linkedin.com/in/dave-bettner)
-
