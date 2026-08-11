@@ -61,7 +61,7 @@ integration-dependent tests skip, and **243** extension tests pass.
 ### 5. [Verify Before Write](https://github.com/dbett4/verify-before-write)
 
 Runnable example: plan a write, check the source has not changed, read the result
-back, restore the original file on mismatch. **9** credential-free tests on the
+back, restore the original file on mismatch. **13** credential-free tests on the
 committed Riverton loop.
 
 ## Also
