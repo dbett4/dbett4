@@ -2,6 +2,10 @@
 
 I build AI-agent systems that do real work on regulated financial reporting platforms. This is work where a bad write ends up in a government's audited financial statements. Background: 12+ years in enterprise SaaS financial reporting, from Workiva Professional Services and Solutions Architecture to leading a CPA firm's governmental reporting practice. Today that delivery runs through agent tooling I engineer: MCP servers, verify-before-write workflows, and multi-agent operations.
 
+## MCP / API integration engineering
+
+**[regulated-reporting-mcp](https://github.com/dbett4/regulated-reporting-mcp)** — an authenticated MCP server for a regulated reporting platform (Workiva). OAuth2 client-credentials auth, async job polling, cursor pagination, and write-safety guards. Extracted from tooling used in production on live government financial reports; ships with a mock mode so it runs end-to-end without platform credentials.
+
 ## Agent-assisted verification on regulated data
 
 **[wingman](https://github.com/dbett4/wingman)** — a defect-detection copilot for financial reporting workbooks. The core loop is inspect → propose → apply → verify: every mutation is a journaled changeset with a predicted post-state, adopted by diff or rolled back exactly, and validated against deterministic tie-out oracles rather than model confidence. Architecture decisions are recorded as ADRs in the repo. Demos run on synthetic data for the fictional City of Riverton.
