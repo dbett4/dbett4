@@ -4,7 +4,7 @@ I build agent systems for regulated enterprise work: API integrations, bounded t
 
 ## Start with the proof
 
-### [Enterprise Agent Deployment Field Kit for Hermes](https://github.com/dbett4/hermes-enterprise-playbook)
+### [Enterprise Agent Deployment Field Kit for Hermes](https://github.com/dbett4/hermes-enterprise-field-kit)
 
 A Hermes-first method for policy-resolved configuration, bounded authority, typed disposition, and reconstructable evidence.
 
@@ -13,7 +13,7 @@ A Hermes-first method for policy-resolved configuration, bounded authority, type
 - Eight negative cases exercise fail-closed behavior through the evaluator or reference pipeline.
 - Includes one committed operator-recorded mission output. It passes its deterministic oracle and remains `needs_review`, but no native runtime attestation was captured, so the repository does not claim that the declared Hermes release produced it.
 - One-command credential-free proof: `./scripts/proof.sh`.
-- Inspect: [proof map](https://github.com/dbett4/hermes-enterprise-playbook/blob/main/PROOF.md) · [committed recorded artifact](https://github.com/dbett4/hermes-enterprise-playbook/tree/main/reference-suite/runs/s1-decide-20260811-025135)
+- Inspect: [proof map](https://github.com/dbett4/hermes-enterprise-field-kit/blob/main/PROOF.md) · [committed recorded artifact](https://github.com/dbett4/hermes-enterprise-field-kit/tree/main/reference-suite/runs/s1-decide-20260811-025135)
 
 ### [Regulated Reporting MCP](https://github.com/dbett4/regulated-reporting-mcp)
 
