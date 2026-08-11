@@ -45,7 +45,7 @@ opt-in. **126** credential-free tests; offline end-to-end demo.
 ### 3. [Hermes Enterprise Deployment Lab](https://github.com/dbett4/hermes-enterprise-deployment-lab)
 
 Synthetic deployment lab: FastMCP server, mock enterprise API, workflow runner, and a
-Compose stack verified with Podman Compose. Exercises post-commit failure and idempotent
+Compose configuration parsed in CI; container startup is optional and not attested in the public tree. Exercises post-commit failure and idempotent
 resume. **73** credential-free tests. Built organically July–August 2026; not a customer
 deployment claim.
 
