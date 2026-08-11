@@ -16,6 +16,8 @@ I build AI-agent systems that do real work on regulated financial reporting plat
 
 **[agent-team-ops](https://github.com/dbett4/agent-team-ops)** — the coordination templates I use to run a multi-runtime agent fleet (Claude, Codex, Cursor, Hermes) against live financial reporting delivery: task boards, task packets, handoff templates, decision logs, and worktree leases. Verification is separated from building — an agent never adjudicates its own risky change.
 
+**[hermes-enterprise-field-kit](https://github.com/dbett4/hermes-enterprise-field-kit)** — an enterprise deployment method for [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent): organization policy resolves the agent's configuration, deterministic oracles verify the results, and a two-factor spend gate bounds live runs. Ships a runnable synthetic reference suite and a committed live-run receipt, validated against the pinned Hermes release.
+
 Open source: [block/buzz #3618](https://github.com/block/buzz/pull/3618) (open) — `fix(acp): coordinate HTTP rate-limit retries` across concurrent ACP agents in Block's 26k-star Rust agent framework.
 
 ---
