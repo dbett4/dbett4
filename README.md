@@ -69,9 +69,14 @@ committed Riverton loop.
 - **[Agent Team Ops](https://github.com/dbett4/agent-team-ops)** — Markdown templates
   and a worked example for multi-agent coordination. A template/process artifact, not an
   orchestration product.
-- **[block/buzz #3618](https://github.com/block/buzz/pull/3618)** — Open contribution
-  for shared rate-limit handling in a large Rust agent project. Unreviewed, unmerged,
-  and **not accepted upstream**; I do not present it as shipped work.
+- **[block/buzz #3618](https://github.com/block/buzz/pull/3618)** — `fix(acp): coordinate
+  HTTP rate-limit retries`. Each `RestClient` clone held its own 429 cooldown, so peers
+  retried into the same limit instead of draining it. Shares one process-local cooldown,
+  serializes bridge admission so queued requests re-check the gate, honors `Retry-After`
+  under a bounded cap, and adds concurrent regression coverage for the retry-storm path.
+  Rust, **+1,698 / −98** across **21** files, opened 2026-07-29. Read it as a work sample:
+  it is unreviewed, unmerged, and **not accepted upstream**, and I do not present it as
+  shipped work.
 
 [davebettner.com](https://davebettner.com) ·
 [LinkedIn](https://www.linkedin.com/in/dave-bettner)
