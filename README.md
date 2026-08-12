@@ -26,9 +26,10 @@ Version-pinned Hermes evaluation kit (v0.20.0 / tag `v2026.8.3`): **318-row**
 capability map, **8** negative tests, **214** preflight tests (`PASS_WITH_LIMITS`),
 one-command check `./scripts/proof.sh`.
 
-**Limit:** No live-attested Hermes mission. The committed S1 record passes local
-deterministic checks but lacks native runtime attestation—I do not present it as proof
-of a live model run.
+**Limit:** One synthetic S1 live one-shot now has native Hermes CLI attestation and a
+deterministic-oracle pass. It remains `needs_review`: no external action or human
+disposition occurred, the recorded $0.406986 is an estimate rather than an actual
+billed amount, and two execution-time exceptions are preserved in the public receipt.
 
 [Technical notes](https://github.com/dbett4/hermes-enterprise-field-kit/blob/main/PROOF.md)
 
