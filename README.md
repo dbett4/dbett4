@@ -71,13 +71,14 @@ committed Riverton loop.
   and a worked example for multi-agent coordination. A template/process artifact, not an
   orchestration product.
 - **[block/buzz #3618](https://github.com/block/buzz/pull/3618)** — `fix(acp): coordinate
-  HTTP rate-limit retries`. Each `RestClient` clone held its own 429 cooldown, so peers
-  retried into the same limit instead of draining it. Shares one process-local cooldown,
-  serializes bridge admission so queued requests re-check the gate, honors `Retry-After`
-  under a bounded cap, and adds concurrent regression coverage for the retry-storm path.
-  Rust, **+1,698 / −98** across **21** files, opened 2026-07-29. Read it as a work sample:
-  it is unreviewed, unmerged, and **not accepted upstream**, and I do not present it as
-  shipped work.
+  HTTP rate-limit retries`. The REST bridge client treats 429 like any other transient
+  error — a fixed 500ms/1s/2s ladder that never reads `Retry-After` and gives up after
+  ~3.5s — and concurrent callers share no state, so one caller's 429 does not slow the
+  rest. Adds a process-local gate armed from `Retry-After` under a bounded cap,
+  serializes bridge admission so queued requests re-check the gate, and adds concurrent
+  regression coverage for the retry-storm path. Rust, **+297 / −9**, opened 2026-07-29.
+  Read it as a work sample: it is unreviewed, unmerged, and **not accepted upstream**,
+  and I do not present it as shipped work.
 
 [davebettner.com](https://davebettner.com) ·
 [LinkedIn](https://www.linkedin.com/in/dave-bettner)
