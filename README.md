@@ -20,7 +20,7 @@ implementations (2022–2024), Workiva platform rollouts at Citrin Cooperman
 
 Runnable checks first. Each repo has a credential-free proof path and explicit limits.
 
-### 1. [Hermes Enterprise Field Kit](https://github.com/dbett4/hermes-enterprise-field-kit)
+### 1. [Hermes Enterprise Evaluation Kit](https://github.com/dbett4/hermes-enterprise-field-kit)
 
 Version-pinned Hermes evaluation kit (v0.20.0 / tag `v2026.8.3`): **318-row**
 capability map, **8** negative tests, **214** preflight tests (`PASS_WITH_LIMITS`),
