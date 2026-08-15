@@ -28,7 +28,7 @@ operator approval from the agent, and survive the ugly “API committed then
 errored” case without double-writing.
 
 **Proof:** synthetic lab with mock API + MCP server + workflow runner; public CI
-attests container restart/replay, native telemetry/trace, and a large
+attests container restart/replay, native telemetry/trace, and a 240-test
 credential-free suite. Not a customer or operated-cloud deployment.
 
 [Proof guide](https://github.com/dbett4/hermes-enterprise-deployment-lab/blob/main/PROOF.md) ·
