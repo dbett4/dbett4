@@ -28,11 +28,11 @@ operator approval from the agent, and survive the ugly “API committed then
 errored” case without double-writing.
 
 **Proof:** synthetic lab with mock API + MCP server + workflow runner; public CI
-attests container restart/replay, native telemetry/trace, and a 240-test
+attests container restart/replay, native telemetry/trace, and a 241-test
 credential-free suite. Not a customer or operated-cloud deployment.
 
 [Proof guide](https://github.com/dbett4/hermes-enterprise-deployment-lab/blob/main/PROOF.md) ·
-[Green CI run](https://github.com/dbett4/hermes-enterprise-deployment-lab/actions/runs/31891411678) ·
+[Green CI run](https://github.com/dbett4/hermes-enterprise-deployment-lab/actions/runs/31892965924) ·
 [Approval decision (ADR 005)](https://github.com/dbett4/hermes-enterprise-deployment-lab/blob/main/docs/adr/005-separated-operator-approval.md)
 
 ### 2. [Hermes Agent Desktop/session recovery PR #84621](https://github.com/NousResearch/hermes-agent/pull/84621)
