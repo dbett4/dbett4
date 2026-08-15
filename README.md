@@ -5,8 +5,10 @@ scoped tools, confirm-before-write paths, independent checks, and receipts a
 person can rerun.
 
 **Current stack signal:** Python · Hermes Agent · MCP/FastMCP · OAuth/API
-integrations · idempotent recovery · GitHub Actions · TypeScript/Electron
-(open PR #84621) · Rust (separate open PR work sample) · Docker Compose
+integrations · idempotent recovery · GitHub Actions · TypeScript/Electron —
+open PR [NousResearch/hermes-agent#84621](https://github.com/NousResearch/hermes-agent/pull/84621)
+(Hermes Desktop session recovery) · Rust — open PR
+[block/buzz#5620](https://github.com/block/buzz/pull/5620) (separate work sample) · Docker Compose
 (public CI container/restart proof attested)
 
 **Background:** More than ten years in financial-reporting software — SEC
@@ -54,7 +56,7 @@ unsafe opt-in.
 [Proof guide](https://github.com/dbett4/regulated-reporting-mcp/blob/main/docs/PROOF.md) ·
 [Security model](https://github.com/dbett4/regulated-reporting-mcp/blob/main/SECURITY.md)
 
-### 4. [Hermes Enterprise Evaluation Kit](https://github.com/dbett4/hermes-enterprise-field-kit)
+### 4. [Hermes Enterprise Evaluation Kit](https://github.com/dbett4/hermes-enterprise-evaluation-kit)
 
 **Story:** Hermes primitives alone are not enough for a real organization. You
 still need job qualification, approved configs, independent checks, and a human
@@ -65,7 +67,7 @@ with no keys or network. One synthetic live one-shot has native attestation and
 still ends `needs_review` (no external action, no human disposition, estimated
 rather than billed cost, two recorded exceptions).
 
-[Technical notes](https://github.com/dbett4/hermes-enterprise-field-kit/blob/main/PROOF.md)
+[Technical notes](https://github.com/dbett4/hermes-enterprise-evaluation-kit/blob/main/PROOF.md)
 
 ### 5. [Wingman](https://github.com/dbett4/wingman)
 
