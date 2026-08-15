@@ -32,7 +32,7 @@ attests container restart/replay, native telemetry/trace, and a large
 credential-free suite. Not a customer or operated-cloud deployment.
 
 [Proof guide](https://github.com/dbett4/hermes-enterprise-deployment-lab/blob/main/PROOF.md) ·
-[Green CI run](https://github.com/dbett4/hermes-enterprise-deployment-lab/actions/runs/31637042354) ·
+[Green CI run](https://github.com/dbett4/hermes-enterprise-deployment-lab/actions/runs/31891411678) ·
 [Approval decision (ADR 005)](https://github.com/dbett4/hermes-enterprise-deployment-lab/blob/main/docs/adr/005-separated-operator-approval.md)
 
 ### 2. [Hermes Agent Desktop/session recovery PR #84621](https://github.com/NousResearch/hermes-agent/pull/84621)
