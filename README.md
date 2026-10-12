@@ -1,25 +1,22 @@
 # Dave Bettner
 
-I design and build products for complex workflows, working through AI coding tools from product direction and interface design through implementation and iteration.
+I'm Dave. I'm building Passal and Leasekite, and I work on tools for financial reporting. Based in Des Moines.
 
-Based in Des Moines, Iowa; open to relocation. Interested in design engineering and product-building roles, especially interfaces for AI tools.
+## What I'm working on
 
-## Selected products
+- **[Passal](https://passal.app/)** — A study app that turns lecture material into flashcards and practice. I design the interface and build the product.
+- **Leasekite** — Vehicle comparison and lease-request workflows. I design and build it; it's still in development, with a private preview.
+- **[Lockfield](https://lockfield.co/)** — A Workiva consulting practice. My work includes its positioning, website, and reporting resources.
 
-- **[Passal](https://passal.app/)** — I own product direction, interface design, and implementation of a study app that helps students choose what to study next, with practice tied to lecture sources. Project stack: React, Next.js, TypeScript, and SQLite.
-- **Leasekite** — I own product direction, interface design, and implementation of vehicle comparison and lease-request workflows. Requests remain drafts for review, with negotiation decisions kept with the user. Private preview, in development.
-- **[Lockfield](https://lockfield.co/)** — I shaped the positioning, website, and reporting resources for a Workiva consulting practice built around training and client ownership.
+I use AI coding tools throughout development. I make the product and design decisions, work through implementation with those tools, and test and revise the result.
 
-## Tools for AI agents
+## From my reporting work
 
-- **[Accounting Acceptance Lab](https://github.com/dbett4/accounting-acceptance-lab)** — Python/SQLite evaluation of accounting-agent decisions on synthetic reconciliation cases, including evidence, approval, and failed-write recovery.
-- **[Regulated Reporting MCP](https://github.com/dbett4/regulated-reporting-mcp)** — Reporting API access for AI agents, with caller-confirmed default writes and tool-specific verification. The public demo uses mock data.
-- **[Hermes Enterprise Deployment Lab](https://github.com/dbett4/hermes-enterprise-deployment-lab)** — A synthetic lab exploring scoped tools, separate operator approval, and recovery after an API commits a change but loses its response. Public work sample; no customer deployment claimed.
+I've spent more than ten years working with financial-reporting software and the people using it. Some of the tools I've built around that work are here:
 
-## Background and approach
+- **[Krow](https://github.com/dbett4/krow)** — A spreadsheet inspector and CSV review tool. Inspect a selected cell's formula, value, and formatting, or review a CSV before import. The public workbook demo uses a simulated Workiva API.
+- **[Regulated Reporting MCP](https://github.com/dbett4/regulated-reporting-mcp)** — An MCP server for reading and updating reporting systems. Includes a mock-data demo; default writes require confirmation.
 
-My background is in financial-reporting software, customer delivery, and technical consulting. I have led customer implementations, managed an implementation team, and built reusable Python reporting tools. That experience shapes how I understand a workflow, decide what belongs in the interface, and carry the work through testing and iteration.
+The public reporting examples use fictional data. Each repository documents its setup and limits.
 
-I use AI coding tools throughout development. Product direction and implementation remain my responsibility. Independent technical projects use synthetic or mock records; they are separate from confidential client work.
-
-[Selected work](https://davebettner.com/work/) · [Experience](https://davebettner.com/experience/) · [LinkedIn](https://www.linkedin.com/in/dave-bettner/)
+[Website](https://davebettner.com/) · [Work](https://davebettner.com/work/) · [LinkedIn](https://www.linkedin.com/in/dave-bettner/)
