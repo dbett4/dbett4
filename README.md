@@ -1,6 +1,6 @@
 # Dave Bettner
 
-I'm Dave. I'm building Passal and Leasekite, and I work on tools for financial reporting. Based in Des Moines.
+I'm Dave. I'm building Passal and Leasekite, and I work on tools for financial reporting.
 
 ## What I'm working on
 
