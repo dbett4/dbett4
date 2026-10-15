@@ -13,15 +13,18 @@ the result.
 
 | Project | What to inspect |
 |---|---|
+| [Cash Flow Reporting](https://github.com/dbett4/cash-flow-reporting) | Generate a fictional two-entity indirect cash-flow statement, consolidation support, restricted-cash reconciliation and noncash disclosures from identified source workbooks. Includes an accounting memo and negative cases. |
+| [SEC Disclosure Review](https://github.com/dbett4/sec-disclosure-review) | Compare cash-flow disclosures across three public software-company filings. Retain citations, exact excerpts, source hashes and fiscal-period differences in a reproducible review matrix. |
 | [Accounting Evidence Workbench](https://github.com/dbett4/accounting-evidence-workbench) | Explain a cash balance from GL entries and retained sources. Reconcile bank rows and invoice populations, compare versions, and inspect unresolved exceptions. Runs offline. |
 | [Accounting Acceptance Lab](https://github.com/dbett4/accounting-acceptance-lab) | Check a proposed revenue accrual adjustment. Five fictional workbook cases exercise double addbacks, stale support, unknown adjustments and a one-cent source difference. |
 | [Regulated Reporting MCP](https://github.com/dbett4/regulated-reporting-mcp) | Give an AI client a guarded reporting API. The credential-free demo exercises confirmation, asynchronous completion, readback and retained receipts through a simulated Workiva service. |
 | [Krow](https://github.com/dbett4/krow) | Inspect a spreadsheet cell's formula, value and formatting, or review a CSV before import. The public workbook demo uses a simulated Workiva API. |
 
 These projects cover different parts of the reporting process. They run separately;
-each repository documents its inputs, checks and limits. Public examples use
-fictional data. They do not contain client workpapers or establish accounting
-approval from a passing software check.
+each repository documents its inputs, checks and limits. Reporting demonstration
+fixtures are fictional; the peer review uses cited public filings. Client
+workpapers remain private. A passing software check does not establish accounting
+approval.
 
 ## Products
 
