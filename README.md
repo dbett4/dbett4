@@ -1,35 +1,23 @@
 # Dave Bettner
 
-I build financial reporting workflows and the tools used to prepare, check and
-maintain them. I've spent more than ten years working with financial reporting
-software and the people using it.
+I build AI tools and agent workflows, drawing on accounting and 10+ years in reporting implementation and customer delivery.
 
-My work combines reporting implementation, accounting models, source integration,
-connected documents and reusable automation. I use AI coding tools throughout
-development. I define the requirements, direct implementation, and test and revise
-the result.
+[Résumé (PDF)](https://davebettner.com/dave-bettner-resume.pdf) · [dbett4@gmail.com](mailto:dbett4@gmail.com) · [Website](https://davebettner.com/) · [LinkedIn](https://www.linkedin.com/in/dave-bettner/)
 
-## Reporting tools you can run
+I define requirements and acceptance criteria, direct the build, and check the result in the application. Codex and Claude help implement features, write tests, and review code. I'm looking for my next role building AI tools and agent workflows.
 
-| Project | What to inspect |
-|---|---|
-| [Cash Flow Reporting](https://github.com/dbett4/cash-flow-reporting) | Generate a fictional two-entity indirect cash-flow statement, consolidation support, restricted-cash reconciliation and noncash disclosures from identified source workbooks. Includes an accounting memo and negative cases. |
-| [SEC Disclosure Review](https://github.com/dbett4/sec-disclosure-review) | Compare cash-flow disclosures across three public software-company filings. Retain citations, exact excerpts, source hashes and fiscal-period differences in a reproducible review matrix. |
-| [Accounting Evidence Workbench](https://github.com/dbett4/accounting-evidence-workbench) | Explain a cash balance from GL entries and retained sources. Reconcile bank rows and invoice populations, compare versions, and inspect unresolved exceptions. Runs offline. |
-| [Accounting Acceptance Lab](https://github.com/dbett4/accounting-acceptance-lab) | Check a proposed revenue accrual adjustment. Five fictional workbook cases exercise double addbacks, stale support, unknown adjustments and a one-cent source difference. |
-| [Regulated Reporting MCP](https://github.com/dbett4/regulated-reporting-mcp) | Give an AI client a guarded reporting API. The credential-free demo exercises confirmation, asynchronous completion, readback and retained receipts through a simulated Workiva service. |
-| [Krow](https://github.com/dbett4/krow) | Inspect a spreadsheet cell's formula, value and formatting, or review a CSV before import. The public workbook demo uses a simulated Workiva API. |
+## What I'm building
 
-These projects cover different parts of the reporting process. They run separately;
-each repository documents its inputs, checks and limits. Reporting demonstration
-fixtures are fictional; the peer review uses cited public filings. Client
-workpapers remain private. A passing software check does not establish accounting
-approval.
+- **[Homebase](https://davebettner.com/work/homebase/)** is my main project, a workspace that connects client relationships, projects, content, and agent work across a founder's five businesses. I own its product direction, design, and implementation. It is private and in active development. The case study uses fictional sandbox data.
+- **[Passal](https://passal.app/)** connects lecture sources, study choices, and practice. I own product direction, interface design, and implementation through AI coding tools.
 
-## Products
+## Public work samples you can run
 
-- **[Passal](https://passal.app/)** — A study app that turns lecture material into flashcards and practice. I design the interface and build the product.
-- **Leasekite** — Vehicle comparison and lease-request workflows. I design and build it; it's still in development, with a private preview.
-- **[Lockfield](https://lockfield.co/)** — A Workiva consulting practice. My work includes its positioning, website, and reporting resources.
+Both run without credentials on fictional data.
 
-[Website](https://davebettner.com/) · [Work](https://davebettner.com/work/) · [LinkedIn](https://www.linkedin.com/in/dave-bettner/)
+- **[Accounting Acceptance Lab](https://github.com/dbett4/accounting-acceptance-lab)** checks an agent's proposed revenue accrual addback against five fictional workpapers, including a double addback and a one-cent difference.
+- **[Regulated Reporting MCP](https://github.com/dbett4/regulated-reporting-mcp)** gives an AI client reporting API tools whose default writes require caller confirmation. The demo uses a simulated Workiva service.
+
+## Background
+
+My background includes Workiva delivery and internal AI-assisted review workflows at LSL, managing a five-person implementation team at Citrin Cooperman, and solutions architecture at Workiva. Client work stays private. [Career history](https://davebettner.com/experience/) · [More projects](https://davebettner.com/work/).
